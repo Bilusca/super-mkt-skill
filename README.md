@@ -55,17 +55,17 @@ Add `--force` to overwrite an existing install.
 ### curl
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Bilusca/super-mkt/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Bilusca/super-mkt-skill/main/install.sh | bash
 
 # project scope, or a pinned version
-SCOPE=project bash -c "$(curl -fsSL https://raw.githubusercontent.com/Bilusca/super-mkt/main/install.sh)"
-REF=v1.0.0    bash -c "$(curl -fsSL https://raw.githubusercontent.com/Bilusca/super-mkt/main/install.sh)"
+SCOPE=project bash -c "$(curl -fsSL https://raw.githubusercontent.com/Bilusca/super-mkt-skill/main/install.sh)"
+REF=v1.0.0    bash -c "$(curl -fsSL https://raw.githubusercontent.com/Bilusca/super-mkt-skill/main/install.sh)"
 ```
 
 ### Claude Code plugin marketplace
 
 ```
-/plugin marketplace add Bilusca/super-mkt
+/plugin marketplace add Bilusca/super-mkt-skill
 /plugin install super-mkt@super-mkt-marketplace
 ```
 
@@ -74,8 +74,8 @@ Updates arrive through `/plugin`, no reinstall needed.
 ### Claude Code, manual
 
 ```bash
-git clone https://github.com/Bilusca/super-mkt
-cp -r super-mkt/skills/super-mkt ~/.claude/skills/
+git clone https://github.com/Bilusca/super-mkt-skill
+cp -r super-mkt-skill/skills/super-mkt ~/.claude/skills/
 ```
 
 It activates on its own when the request is about copy. Or call it directly: `/super-mkt`.
@@ -83,7 +83,7 @@ It activates on its own when the request is about copy. Or call it directly: `/s
 ### Claude.ai / Claude Desktop
 
 Settings → Capabilities → Skills → Upload skill → pick `super-mkt.zip`
-from the [latest release](https://github.com/Bilusca/super-mkt/releases/latest).
+from the [latest release](https://github.com/Bilusca/super-mkt-skill/releases/latest).
 
 ### Cursor, Windsurf, Cline, Copilot
 
