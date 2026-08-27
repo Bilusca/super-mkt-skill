@@ -1,9 +1,11 @@
 {
   "name": "super-mkt-marketplace",
-  "owner": { "name": "Bilusca" },
+  "owner": {
+    "name": "Bilusca"
+  },
   "metadata": {
-    "description": "super-mkt — direct-response copywriting skill for Claude Code",
-    "version": "1.0.0"
+    "description": "super-mkt \u2014 direct-response copywriting skill for Claude Code",
+    "version": "1.1.0"
   },
   "plugins": [
     {

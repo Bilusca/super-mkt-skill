@@ -19,7 +19,7 @@ mkdir -p "$OUT"
   # SKILL.md without the YAML frontmatter; reference pointers become appendix pointers
   awk 'BEGIN{f=0} /^---$/{f++; next} f>=2' "$SRC/SKILL.md" \
     | sed 's|`references/\([a-z]*\)\.md`|the `references/\1.md` appendix at the end of this document|g'
-  for f in frameworks formats briefing; do
+  for f in frameworks formats audit briefing; do
     echo
     echo "---"
     echo

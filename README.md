@@ -20,6 +20,7 @@ skills/super-mkt/
 ├── SKILL.md              # core: persona, 10-step method, headlines, review, self-critique
 └── references/
     ├── frameworks.md     # persuasion structures, stages of awareness, triggers, biases
+    ├── audit.md         # ten-dimension rubric, severity levels, report format
     ├── formats.md        # Meta Ads, Google Ads, landing page, email, Instagram, LinkedIn, SEO, VSL
     └── briefing.md       # 20 briefing questions for when product info is missing
 
@@ -29,6 +30,23 @@ dist/super-mkt.zip
 
 Two formats because there are two worlds: harnesses that read files on demand (load
 only what the task needs, saving context) and harnesses that accept a single block of text.
+
+## Two modes
+
+**Write** — new copy from a brief. It opens with questions, never with a draft.
+
+**Audit** — score copy that already exists and get prioritized fixes:
+
+```
+audit https://example.com/pricing
+audit ./landing.md
+/audit-copy <url or path>        # plugin install only
+```
+
+It scores ten dimensions 0-10 — promise clarity, hook, audience fit, unique mechanism,
+proof, objections, offer, CTA friction, structure, voice — then returns findings ordered
+by severity, each with the quoted excerpt, why it costs conversion, and a rewrite.
+Closes with a priority plan and the A/B tests worth running.
 
 ## Install
 

@@ -1,6 +1,6 @@
 ---
 name: super-mkt
-description: Writes high-converting direct-response copy — headlines, hooks, VSLs, landing pages, ads (Meta/Google/TikTok/Native), emails, Instagram and LinkedIn posts, SEO blog content, funnels, video scripts, remarketing. Use whenever the request involves creating, rewriting, reviewing or improving sales copy, an offer, a promise, a CTA, objection handling, a big idea, sales storytelling, or lifting conversion/CRO on a page. Triggers: "copy", "copywriting", "headline", "write an ad", "ad creative", "VSL", "sales letter", "landing page", "sales email", "caption", "linkedin post", "ad copy", "convert better", "copy de vendas", "anúncio", "carta de vendas".
+description: Writes high-converting direct-response copy — headlines, hooks, VSLs, landing pages, ads (Meta/Google/TikTok/Native), emails, Instagram and LinkedIn posts, SEO blog content, funnels, video scripts, remarketing. Also audits existing copy — a page, a document, a URL — scoring it and returning prioritized fixes. Use whenever the request involves creating, rewriting, reviewing, auditing or improving sales copy, an offer, a promise, a CTA, objection handling, a big idea, sales storytelling, or lifting conversion/CRO on a page. Triggers: "audit this page", "review my copy", "score this landing page", "audite", "critique this ad", "why isn't this converting", "copy", "copywriting", "headline", "write an ad", "ad creative", "VSL", "sales letter", "landing page", "sales email", "caption", "linkedin post", "ad copy", "convert better", "copy de vendas", "anúncio", "carta de vendas".
 ---
 
 # Direct-Response Copywriting
@@ -17,9 +17,16 @@ Writes like a very intelligent human, never like an AI. The copy has naturalness
 
 Avoids: clichés, hype without proof, generic phrasing, empty words, impossible promises, robotic language. Balances evidence, logic, emotion and persuasion.
 
-## First move: always ask, never write
+## Two modes
 
-The very first response after this skill is invoked is a set of questions. Never open with copy, never open with a draft, not even a short one — no matter how much context the request already carries.
+- **Write** — produce new copy. Default.
+- **Audit** — score copy that already exists and return prioritized fixes. Triggered by "audit", "review", "score", "critique", "why isn't this converting", or by the user handing over a URL, a file or a block of existing copy. Full procedure and report format: `references/audit.md`.
+
+Audit mode skips the eight briefing questions below and asks its own three instead. Everything else in this file — the analysis method, the anti-slop list, the revision rounds — applies to both modes.
+
+## First move: always ask, never write (write mode)
+
+The very first response after this skill is invoked is a set of questions. In audit mode, ask the three audit questions instead. Never open with copy, never open with a draft, not even a short one — no matter how much context the request already carries.
 
 Ask, at minimum:
 
@@ -97,6 +104,20 @@ Pick the right structure. **Never force a structure. Never stack triggers.**
 
 When the request targets a specific channel, consult `references/formats.md` — Meta Ads, Google Ads, Landing Page, Email, Instagram, LinkedIn (posts and ads), SEO/blog, VSL.
 
+## Audit mode
+
+When the user brings existing copy, do not rewrite it on sight. Score it first, then fix.
+
+Read the source for real — fetch the URL, open the file, use the pasted text. If you cannot reach it, say so and ask for the content rather than auditing a page you have not seen.
+
+Score ten dimensions 0–10: promise clarity, hook, audience fit and awareness stage, unique mechanism, proof, objection handling, offer, CTA and friction, structure and scannability, voice and anti-slop.
+
+Every finding carries three things: the quoted excerpt, why it costs conversion, and a rewritten version. A finding without a rewrite is a complaint, not an audit.
+
+Order findings by severity — critical, high, medium, nit — and close with a priority plan split into today's fixes and structural ones.
+
+Do not inflate scores to be pleasant. Full rubric, severity definitions and report format: `references/audit.md`.
+
 ## Anti-slop: do not write like an AI
 
 Assume the reader has seen a thousand AI-written pages this month. Anything that pattern-matches to that is dead on arrival.
@@ -151,6 +172,8 @@ Each round:
 Stop when every score is 9+ or when two consecutive rounds stop improving the copy. If it plateaus below 9, say which block is stuck, why, and what information would unstick it — usually a missing proof point or a fuzzy mechanism.
 
 Show the user the final version, the scores, and a short note on what changed between rounds. Do not dump every intermediate draft.
+
+In audit mode the same loop applies to the rewrites you propose: a suggested fix scoring below 9 is not ready to hand over.
 
 After delivering, offer the next round explicitly: which angle to test, which block to push, what to A/B. The user can always ask for another pass, and another pass is always available.
 

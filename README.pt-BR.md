@@ -20,6 +20,7 @@ skills/super-mkt/
 ├── SKILL.md              # núcleo: persona, método de 10 passos, headlines, revisão, autocrítica
 └── references/
     ├── frameworks.md     # estruturas de persuasão, estágios de consciência, gatilhos, vieses
+    ├── audit.md          # rubrica de 10 dimensões, severidade, formato do relatório
     ├── formats.md        # Meta Ads, Google Ads, landing page, email, Instagram, LinkedIn, SEO, VSL
     └── briefing.md       # 20 perguntas de briefing para quando falta informação do produto
 
@@ -29,6 +30,23 @@ dist/super-mkt.zip
 
 Dois formatos porque existem dois mundos: harness que lê arquivo sob demanda (carrega só
 o que a tarefa pede, economiza contexto) e harness que só aceita um bloco de texto.
+
+## Dois modos
+
+**Escrita** — copy nova a partir de um briefing. Abre com perguntas, nunca com rascunho.
+
+**Auditoria** — dá nota para copy que já existe e devolve as correções priorizadas:
+
+```
+audite https://exemplo.com/precos
+audite ./landing.md
+/audit-copy <url ou caminho>     # só na instalação via plugin
+```
+
+Pontua dez dimensões de 0 a 10 — clareza da promessa, hook, aderência ao público,
+mecanismo único, prova, objeções, oferta, atrito do CTA, estrutura, voz — e devolve os
+problemas ordenados por severidade, cada um com o trecho citado, por que custa conversão
+e a reescrita. Fecha com plano de prioridade e os testes A/B que valem a pena.
 
 ## Instalação
 
