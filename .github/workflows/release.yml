@@ -28,6 +28,18 @@ jobs:
             dist/super-mkt.zip
             dist/PROMPT.md
 
+      - name: Check npm credentials
+        run: |
+          if [ -z "$NODE_AUTH_TOKEN" ]; then
+            echo "::error::NPM_TOKEN secret is empty. Set it with: gh secret set NPM_TOKEN"
+            exit 1
+          fi
+          echo "token length: ${#NODE_AUTH_TOKEN}"
+          echo "npmrc in use: ${NPM_CONFIG_USERCONFIG:-<default>}"
+          npm whoami || echo "::error::token is present but not accepted by the registry"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       - name: Publish to npm
         run: |
           VERSION=$(node -p "require('./package.json').version")
