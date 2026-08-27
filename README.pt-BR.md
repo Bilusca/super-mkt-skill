@@ -55,17 +55,17 @@ Use `--force` para sobrescrever uma instalação existente.
 ### curl
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/bilusca/super-mkt/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Bilusca/super-mkt/main/install.sh | bash
 
 # escopo de projeto, ou versão fixada
-SCOPE=project bash -c "$(curl -fsSL https://raw.githubusercontent.com/bilusca/super-mkt/main/install.sh)"
-REF=v1.0.0    bash -c "$(curl -fsSL https://raw.githubusercontent.com/bilusca/super-mkt/main/install.sh)"
+SCOPE=project bash -c "$(curl -fsSL https://raw.githubusercontent.com/Bilusca/super-mkt/main/install.sh)"
+REF=v1.0.0    bash -c "$(curl -fsSL https://raw.githubusercontent.com/Bilusca/super-mkt/main/install.sh)"
 ```
 
 ### Marketplace de plugins do Claude Code
 
 ```
-/plugin marketplace add bilusca/super-mkt
+/plugin marketplace add Bilusca/super-mkt
 /plugin install super-mkt@super-mkt-marketplace
 ```
 
@@ -74,7 +74,7 @@ Atualizações chegam pelo `/plugin`, sem reinstalar.
 ### Claude Code, manual
 
 ```bash
-git clone https://github.com/bilusca/super-mkt
+git clone https://github.com/Bilusca/super-mkt
 cp -r super-mkt/skills/super-mkt ~/.claude/skills/
 ```
 
@@ -83,7 +83,7 @@ Ativa sozinha quando o pedido é de copy. Ou chame direto: `/super-mkt`.
 ### Claude.ai / Claude Desktop
 
 Settings → Capabilities → Skills → Upload skill → envie o `super-mkt.zip`
-da [última release](https://github.com/bilusca/super-mkt/releases/latest).
+da [última release](https://github.com/Bilusca/super-mkt/releases/latest).
 
 ### Cursor, Windsurf, Cline, Copilot
 
