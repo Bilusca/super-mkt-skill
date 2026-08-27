@@ -29,6 +29,12 @@ jobs:
             dist/PROMPT.md
 
       - name: Publish to npm
-        run: npm publish --access public
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          if npm view "super-mkt@$VERSION" version >/dev/null 2>&1; then
+            echo "super-mkt@$VERSION is already on npm — skipping publish"
+          else
+            npm publish --access public
+          fi
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
