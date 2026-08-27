@@ -1,0 +1,15 @@
+{
+  "name": "super-mkt-marketplace",
+  "owner": { "name": "bilusca" },
+  "metadata": {
+    "description": "super-mkt — direct-response copywriting skill for Claude Code",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "super-mkt",
+      "source": "./",
+      "description": "Senior direct-response copywriter: strategy before writing, 15+ headlines, objection handling, channel formats for Meta/Google Ads, landing pages, email, Instagram, LinkedIn, SEO and VSLs."
+    }
+  ]
+}

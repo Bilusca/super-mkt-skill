@@ -1,0 +1,39 @@
+{
+  "name": "super-mkt",
+  "version": "1.0.0",
+  "description": "super-mkt — direct-response copywriting Agent Skill for Claude Code, Claude.ai, Cursor, ChatGPT and any LLM",
+  "keywords": [
+    "claude",
+    "claude-code",
+    "agent-skill",
+    "skill",
+    "copywriting",
+    "direct-response",
+    "marketing-skill",
+    "marketing",
+    "prompt",
+    "system-prompt",
+    "ai"
+  ],
+  "license": "MIT",
+  "type": "commonjs",
+  "bin": {
+    "super-mkt": "bin/cli.js",
+    "mkt": "bin/cli.js"
+  },
+  "files": [
+    "bin/",
+    "skills/",
+    "dist/",
+    "README.md",
+    "README.pt-BR.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "./build.sh",
+    "prepack": "./build.sh"
+  }
+}
